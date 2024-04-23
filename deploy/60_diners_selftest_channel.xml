@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!-- Enviamos tx al Isw, para que las autorize el CSW. GenericPackager y iso93ascii_DN-->
+<channel-adaptor name='selftest-adaptor-inter' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="org.jpos.iso.packager.GenericPackager">
+        <property name="packager-config" value="cfg/iso93ascii.xml" />
+        <property name="host" value="localhost" /> <!-- dockerldev01.dev.cabal.coop // localhost // lphotonn01vts // lphotonn02vts // lphotonn03vts  -->
+        <property name="port" value="7002" /> <!-- 13327 50_dn_server -->
+    </channel>
+    <in>selftest-diners-send</in>
+    <out>selftest-diners-receive</out>
+    <reconnect-delay>25000</reconnect-delay>
+</channel-adaptor>

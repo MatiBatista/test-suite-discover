@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!-- Apuntando al 10724 se realizan las pruebas Acq de Discover, el bsh va siempre, XML2003Packager y XML2003Packager  -->
+<channel-adaptor name='selftest-adaptor-inter' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="org.jpos.iso.channel.ASCIIChannel" logger="Q2" packager="ar.cabal.jpos.XML2003Packager">
+        <property name="packager-config" value="cfg/iso93ascii_DN" />
+        <property name="host" value="dockerldev01" /> <!-- Isw con llegada / IntercambioLlavesDn desa lphotonn03vts.cabal.coop-->
+        <property name="port" value="10724" /> <!-- 3327 mdw-discover   13327 50_dn_server 10724 50_ar_server (ISW) 13950 50_isw_server (CSW)-->
+        <filter class="org.jpos.bsh.BSHFilter" direction="outgoing">
+            <property name="source" value="deploy/inter_outgoing.bsh" />
+        </filter>
+    </channel>
+    <in>selftest-diners-send</in>
+    <out>selftest-diners-receive</out>
+    <reconnect-delay>25000</reconnect-delay>
+</channel-adaptor>

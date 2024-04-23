@@ -1,0 +1,4 @@
+<isomsg>
+ <field id="37" value='! RRN=value' />
+ <field id="39" value='! return value.equals(RC)'/>
+</isomsg>

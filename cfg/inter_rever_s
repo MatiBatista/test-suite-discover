@@ -1,0 +1,103 @@
+
+<!-- REVERSO DE COMPRA -->
+
+<isomsg>
+ <field id='0' value='!MTI'/>
+ <field id="2" value='!PAN'/>
+ <field id='3' value='!PCODE'/>
+ <field id='4' value='!ISOUtil.zeropad (AMOUNTTRN,12)'/>
+ <field id='5' value='!ISOUtil.zeropad (AMOUNTSET,12)'/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='9' value="20002932"/>
+ <field id='11' value='!STAN'/>
+ <field id='12' value='!get_date(DATE,"HHmmss")'/>
+ <field id='13' value='!get_date(DATE, "MMdd")'/>
+ <field id='22' value='!ENTRYMODE'/>
+ <field id="25" value="00"/>
+ <field id="35" value='!TRACK2'/>
+ <field id="37" value='!RRN'/>
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+ <field id="43" value="DA VINCI JOAO FERNAN   ARMACAO DOS  BR  "/>
+ <field id="45" value="B6042650000177922^FERRANDO/ JUAN BAUTISTA   ^20051012400000000000" />
+ <field id="48" value='!TLV' />
+ <field id='49' value='!CURRENCYTRN' />
+ <field id='50' value='!CURRENCYSET' />
+ <field id='60' value='!VERSION' />
+ <field id="61" value='!PAIS' />
+ <field id="62" value='!INFOTICKET'/>
+</isomsg>
+
+<!-- REVERSO DE COMPRA 
+
+      <isomsg direction="incoming">
+      <field id="0" value="0400"/>
+      <field id="2" value="5896570049979329"/>
+      <field id="3" value="003000"/>
+      <field id="4" value="000000007033"/>
+      <field id="7" value="0527160951"/>
+      <field id="11" value="834171"/>
+      <field id="12" value="130951"/>
+      <field id="13" value="0527"/>
+      <field id="14" value="1511"/>
+      <field id="22" value="021"/>
+      <field id="24" value="001"/>
+      <field id="25" value="00"/>
+      <field id="35" value="5896570049979329=15111015900000000000"/>
+      <field id="41" value="11111111"/>
+      <field id="42" value="009205950      "/>
+      <field id="43" value="POSTO Z Z T 63 LTDA    GOIANIA       BRA"/>
+      <field id="48" value="206"/>
+      <field id="49" value="840"/>
+      <field id="55" value="795"/>
+      <field id="61" value="0000000080007674230100  "/>
+      <field id="62" value="834171"/>
+    </isomsg>   
+	
+    <isomsg direction="incoming">
+      <field id="0" value="0420"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000613"/>
+      <field id="7" value="0524115924"/>
+      <field id="11" value="482456"/>
+      <field id="12" value="115924"/>
+      <field id="13" value="0524"/>
+      <field id="22" value="020"/>
+      <field id="24" value="020"/>
+      <field id="35" value="6042500000093373=15041010590000000000"/>
+      <field id="38" value="129220"/>
+      <field id="39" value="00"/>
+      <field id="41" value="PSE00   "/>
+      <field id="42" value="000000000265013"/>
+      <field id="48" value="000"/>
+      <field id="49" value="840"/>
+      <field id="60" value="000000000000"/>
+      <field id="61" value="00"/>
+      <field id="62" value="000482456"/>
+    </isomsg>
+	
+	
+       <isomsg direction="incoming">
+         <field id="0" value="0420"/>
+         <field id="2" value="5896570042767846"/>
+         <field id="3" value="003000"/>
+         <field id="4" value="000000003788"/>
+         <field id="7" value="0427191846"/>
+         <field id="11" value="270851"/>
+         <field id="12" value="161836"/>
+         <field id="13" value="0427"/>
+         <field id="22" value="012"/>
+         <field id="24" value="001"/>
+         <field id="25" value="00"/>
+         <field id="41" value="11111111"/>
+         <field id="42" value="017828783      "/>
+         <field id="48" value="101"/>
+         <field id="49" value="840"/>
+         <field id="59" value="BR"/>
+         <field id="61" value="00000000000"/>
+         <field id="62" value="270851"/>
+       </isomsg>
+	   
+	       
+	   
+-->

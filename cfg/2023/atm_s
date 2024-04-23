@@ -1,0 +1,27 @@
+<isomsg>
+      <field id="0" value="1100"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="010000"/>
+      <field id="4" value="000000004400"/>
+      <field id="6" value="000000004754"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="22" value="511201513346"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="6011"/>
+      <field id="32" value="00000361597"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="!TRACK2"/>
+      <field id="42" value="01280605       "/>
+      <field id="43" value="BANKINTER\\VALENCIA\             724"/>
+      <field id="48" value="6"/>
+      <field id="49" value="978"/>
+      <field id="51" value="840"/>
+      <field id="52" value="576C5CD84EB7E6EC" type="binary"/>
+      <!--field id="55" value="5F2A02097882023900950580000480009A032305229C01019F02060000000040009F03060000000000009F10080205A00000C000009F1A0207249F26086956EFC6427761FC9F2701809F33036040209F34030201009F360200089F370469AD89298407A0000001523010" type="binary"/-->
+      <field id="92" value="724"/>
+      <!--field id="100" value="00000367389"/-->
+      <!--field id="123" value="193123365132520"/-->
+</isomsg>

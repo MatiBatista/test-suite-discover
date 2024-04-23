@@ -1,0 +1,29 @@
+<!-- Enviamos una 1100 al esb para generar una 1120 a ds2 infinitus -->
+<isomsg>
+      <field id="0" value="1100"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000100"/>
+      <field id="6" value="000000000100"/>
+      <field id="7" value="0930161327"/>
+      <field id="11" value="041224"/>
+      <field id="12" value="220930121222"/>
+      <field id="14" value="!EXP"/>
+      <field id="22" value="901101591000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="5691"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="!TRACK2"/>
+      <field id="41" value="00005403"/>
+      <field id="42" value="601101865000549"/>
+      <field id="43" value="AEROPOSTALE #54\100 W 33RD ST # 160164\NEW YORK\100010000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+      <field id="55" value="9F02060000000069969F2608DE1AC00241709E739F0607A0000001523010820239009F360200199F2701809F10080205A04000C000009F1A020840950500000080005F2A0208409A032209309C01009F370490C3C7309F090200019F34035E03008407A00000015230109F3303E0F8C89F3501229F0306000000000000" type="binary"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="862235448074656"/>
+</isomsg>

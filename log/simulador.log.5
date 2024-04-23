@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.RotateLogListener">
+<log realm="Q2.system" at="Wed Nov 08 09:22:47 ART 2023.173">
+  <info>
+    shutting down (hook)
+  </info>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.435">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.438">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.441">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.447">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Wed Nov 08 09:22:48 ART 2023.451" lifespan="407273641ms">
+  <receive/>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.453">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.457">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Wed Nov 08 09:22:48 ART 2023.460">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\00_logger.xml
+  </trace>
+</log>
+</logger>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.RotateLogListener">
+<log realm="Q2.system" at="Mon Nov 27 09:35:57 ART 2023.534">
+  <info>
+    Q2 started, deployDir=C:\GIT\CET\test-suite-discover\deploy
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:35:57 ART 2023.567">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:35:57 ART 2023.597">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:35:57 ART 2023.634">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 09:35:58 ART 2023.231" lifespan="6ms">
+  <connect>
+    localhost:13327
+  </connect>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 09:35:58 ART 2023.690" lifespan="5ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager -->
+      <field id="0" value="1100"/>
+      <field id="2" value="6509000011505891"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000250"/>
+      <field id="6" value="000000000402"/>
+      <field id="7" value="1127093558"/>
+      <field id="11" value="000926"/>
+      <field id="12" value="231127093558"/>
+      <field id="14" value="2605"/>
+      <field id="22" value="200101200001"/>
+      <field id="24" value="100"/>
+      <field id="26" value="7011"/>
+      <field id="32" value="00000361603"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6509000011505891=26052016820000000000"/>
+      <field id="40" value="024"/>
+      <field id="42" value="123400000000000"/>
+      <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+      <field id="48" value="6"/>
+      <field id="49" value="826"/>
+      <field id="51" value="840"/>
+      <field id="92" value="826"/>
+      <field id="123" value="073130985337427"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 09:36:43 ART 2023.691">
+  <error>
+    <test-case name='COMPRA_MANUAL_CON_CVV1_Y_CVV2'>
+      <request>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="!PAN"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="!AMOUNT_ORIGINAL"/>
+          <field id="6" value="!AMOUNT_CONCILIATION"/>
+          <field id="7" value="!get_date(DATE)"/>
+          <field id="11" value="!STAN"/>
+          <field id="12" value="!get_date(DATE,&quot;yyMMddHHmmss&quot;)"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="!CURRENCY_ORIGINAL"/>
+          <field id="51" value="!CURRENCY_CONCILIATION"/>
+          <field id="92" value="!COUNTRY_CODE"/>
+          <field id="93" value="!DISCOVER_IIC"/>
+          <field id="100" value="!CABAL_ISS_IIC"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </request>
+      <expanded-request>
+        <isomsg direction="outgoing">
+          <!-- org.jpos.iso.packager.GenericPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="6509000011505891"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="000000000250"/>
+          <field id="6" value="000000000402"/>
+          <field id="7" value="1127093558"/>
+          <field id="11" value="000926"/>
+          <field id="12" value="231127093558"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="826"/>
+          <field id="51" value="840"/>
+          <field id="92" value="826"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </expanded-request>
+      <expected-response>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="11" value="! STAN=value"/>
+          <field id="37" value="! RRN=value"/>
+          <field id="39" value="! return value.equals(RC)"/>
+        </isomsg>
+      </expected-response>
+      <elapsed>45006</elapsed>
+    </test-case>
+  </error>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 09:36:43 ART 2023.916" lifespan="45401ms">
+  <results>
+    1: COMPRA_MANUAL_CON_CVV1_Y_CVV2                      [TIMEOUT] 45006ms.
+    elapsed server=45006ms(99%), simulator=291ms(0%), total=45297ms
+  </results>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:01 ART 2023.425">
+  <info>
+    shutting down (hook)
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.285">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.289">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.299">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </trace>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 09:37:03 ART 2023.305" lifespan="65061ms">
+  <receive/>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.309">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.317">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.340">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 09:37:03 ART 2023.343">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\00_logger.xml
+  </trace>
+</log>
+</logger>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.RotateLogListener">
+<log realm="Q2.system" at="Mon Nov 27 12:14:10 ART 2023.43">
+  <info>
+    Q2 started, deployDir=C:\GIT\CET\test-suite-discover\deploy
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:14:10 ART 2023.79">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:14:10 ART 2023.115">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:14:10 ART 2023.189">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:14:11 ART 2023.526" lifespan="5ms">
+  <connect>
+    localhost:13327
+  </connect>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:14:12 ART 2023.106" lifespan="8ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager -->
+      <field id="0" value="1100"/>
+      <field id="2" value="6509000011505891"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000250"/>
+      <field id="6" value="000000000402"/>
+      <field id="7" value="1127121411"/>
+      <field id="11" value="000927"/>
+      <field id="12" value="231127121411"/>
+      <field id="14" value="2605"/>
+      <field id="22" value="200101200001"/>
+      <field id="24" value="100"/>
+      <field id="26" value="7011"/>
+      <field id="32" value="00000361603"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6509000011505891=26052016820000000000"/>
+      <field id="40" value="024"/>
+      <field id="42" value="123400000000000"/>
+      <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+      <field id="48" value="6"/>
+      <field id="49" value="826"/>
+      <field id="51" value="840"/>
+      <field id="92" value="826"/>
+      <field id="123" value="073130985337427"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 12:14:57 ART 2023.108">
+  <error>
+    <test-case name='COMPRA_MANUAL_CON_CVV1_Y_CVV2'>
+      <request>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="!PAN"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="!AMOUNT_ORIGINAL"/>
+          <field id="6" value="!AMOUNT_CONCILIATION"/>
+          <field id="7" value="!get_date(DATE)"/>
+          <field id="11" value="!STAN"/>
+          <field id="12" value="!get_date(DATE,&quot;yyMMddHHmmss&quot;)"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="!CURRENCY_ORIGINAL"/>
+          <field id="51" value="!CURRENCY_CONCILIATION"/>
+          <field id="92" value="!COUNTRY_CODE"/>
+          <field id="93" value="!DISCOVER_IIC"/>
+          <field id="100" value="!CABAL_ISS_IIC"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </request>
+      <expanded-request>
+        <isomsg direction="outgoing">
+          <!-- org.jpos.iso.packager.GenericPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="6509000011505891"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="000000000250"/>
+          <field id="6" value="000000000402"/>
+          <field id="7" value="1127121411"/>
+          <field id="11" value="000927"/>
+          <field id="12" value="231127121411"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="826"/>
+          <field id="51" value="840"/>
+          <field id="92" value="826"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </expanded-request>
+      <expected-response>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="11" value="! STAN=value"/>
+          <field id="37" value="! RRN=value"/>
+          <field id="39" value="! return value.equals(RC)"/>
+        </isomsg>
+      </expected-response>
+      <elapsed>45010</elapsed>
+    </test-case>
+  </error>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 12:14:57 ART 2023.297" lifespan="45340ms">
+  <results>
+    1: COMPRA_MANUAL_CON_CVV1_Y_CVV2                      [TIMEOUT] 45010ms.
+    elapsed server=45010ms(99%), simulator=230ms(0%), total=45240ms
+  </results>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:20:58 ART 2023.912" lifespan="407382ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Mon Nov 27 12:20:58 ART 2023.915">
+  <warn>
+    channel-receiver-selftest-diners-receive
+    <exception name="null">
+    java.io.EOFException
+	at java.base/java.io.DataInputStream.readFully(DataInputStream.java:202)
+	at org.jpos.iso.channel.ASCIIChannel.getMessageLength(ASCIIChannel.java:96)
+	at org.jpos.iso.BaseChannel.receive(BaseChannel.java:642)
+	at org.jpos.q2.iso.ChannelAdaptor$Receiver.run(ChannelAdaptor.java:295)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+    </exception>
+  </warn>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:16 ART 2023.672">
+  <info>
+    shutting down (hook)
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:18 ART 2023.353">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:18 ART 2023.488">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:19 ART 2023.88">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:19 ART 2023.107">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:19 ART 2023.327">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:19 ART 2023.340">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:21:19 ART 2023.361">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\00_logger.xml
+  </trace>
+</log>
+</logger>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.RotateLogListener">
+<log realm="Q2.system" at="Mon Nov 27 12:24:41 ART 2023.403">
+  <info>
+    Q2 started, deployDir=C:\GIT\CET\test-suite-discover\deploy
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:24:41 ART 2023.443">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:24:41 ART 2023.482">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:24:41 ART 2023.502">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:24:42 ART 2023.385" lifespan="5ms">
+  <connect>
+    localhost:13327
+  </connect>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:24:42 ART 2023.922" lifespan="6ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager -->
+      <field id="0" value="1100"/>
+      <field id="2" value="6509000011505891"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000250"/>
+      <field id="6" value="000000000402"/>
+      <field id="7" value="1127122442"/>
+      <field id="11" value="000928"/>
+      <field id="12" value="231127122442"/>
+      <field id="14" value="2605"/>
+      <field id="22" value="200101200001"/>
+      <field id="24" value="100"/>
+      <field id="26" value="7011"/>
+      <field id="32" value="00000361603"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6509000011505891=26052016820000000000"/>
+      <field id="40" value="024"/>
+      <field id="42" value="123400000000000"/>
+      <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+      <field id="48" value="6"/>
+      <field id="49" value="826"/>
+      <field id="51" value="840"/>
+      <field id="92" value="826"/>
+      <field id="123" value="073130985337427"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 12:25:27 ART 2023.923">
+  <error>
+    <test-case name='COMPRA_MANUAL_CON_CVV1_Y_CVV2'>
+      <request>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="!PAN"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="!AMOUNT_ORIGINAL"/>
+          <field id="6" value="!AMOUNT_CONCILIATION"/>
+          <field id="7" value="!get_date(DATE)"/>
+          <field id="11" value="!STAN"/>
+          <field id="12" value="!get_date(DATE,&quot;yyMMddHHmmss&quot;)"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="!CURRENCY_ORIGINAL"/>
+          <field id="51" value="!CURRENCY_CONCILIATION"/>
+          <field id="92" value="!COUNTRY_CODE"/>
+          <field id="93" value="!DISCOVER_IIC"/>
+          <field id="100" value="!CABAL_ISS_IIC"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </request>
+      <expanded-request>
+        <isomsg direction="outgoing">
+          <!-- org.jpos.iso.packager.GenericPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="6509000011505891"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="000000000250"/>
+          <field id="6" value="000000000402"/>
+          <field id="7" value="1127122442"/>
+          <field id="11" value="000928"/>
+          <field id="12" value="231127122442"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="826"/>
+          <field id="51" value="840"/>
+          <field id="92" value="826"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </expanded-request>
+      <expected-response>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="11" value="! STAN=value"/>
+          <field id="37" value="! RRN=value"/>
+          <field id="39" value="! return value.equals(RC)"/>
+        </isomsg>
+      </expected-response>
+      <elapsed>45007</elapsed>
+    </test-case>
+  </error>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 12:25:28 ART 2023.99" lifespan="45352ms">
+  <results>
+    1: COMPRA_MANUAL_CON_CVV1_Y_CVV2                      [TIMEOUT] 45007ms.
+    elapsed server=45007ms(99%), simulator=245ms(0%), total=45252ms
+  </results>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:04 ART 2023.317">
+  <info>
+    shutting down (hook)
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.102">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.105">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.107">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </trace>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 12:28:05 ART 2023.116" lifespan="202727ms">
+  <receive/>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.394" lifespan="172ms">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.606">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </trace>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.660">
+  <info>
+    undeployed:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 12:28:05 ART 2023.674">
+  <trace>
+    undeploying:C:\GIT\CET\test-suite-discover\deploy\00_logger.xml
+  </trace>
+</log>
+</logger>
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.RotateLogListener">
+<log realm="Q2.system" at="Mon Nov 27 14:54:31 ART 2023.263" lifespan="1ms">
+  <info>
+    Q2 started, deployDir=C:\GIT\CET\test-suite-discover\deploy
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 14:54:31 ART 2023.296">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\20_diners_selftest_mux.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 14:54:31 ART 2023.326">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\60_diners_selftest_channel.xml
+  </info>
+</log>
+<log realm="Q2.system" at="Mon Nov 27 14:54:31 ART 2023.347">
+  <info>
+    deploy:C:\GIT\CET\test-suite-discover\deploy\70_seftest_DinersIss_Matias.xml
+  </info>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 14:54:32 ART 2023.381" lifespan="5ms">
+  <connect>
+    localhost:13327
+  </connect>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Mon Nov 27 14:54:32 ART 2023.791" lifespan="2ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager -->
+      <field id="0" value="1100"/>
+      <field id="2" value="6509000011505891"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000250"/>
+      <field id="6" value="000000000402"/>
+      <field id="7" value="1127145432"/>
+      <field id="11" value="000929"/>
+      <field id="12" value="231127145432"/>
+      <field id="14" value="2605"/>
+      <field id="22" value="200101200001"/>
+      <field id="24" value="100"/>
+      <field id="26" value="7011"/>
+      <field id="32" value="00000361603"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6509000011505891=26052016820000000000"/>
+      <field id="40" value="024"/>
+      <field id="42" value="123400000000000"/>
+      <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+      <field id="48" value="6"/>
+      <field id="49" value="826"/>
+      <field id="51" value="840"/>
+      <field id="92" value="826"/>
+      <field id="123" value="073130985337427"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 14:55:17 ART 2023.789">
+  <error>
+    <test-case name='COMPRA_MANUAL_CON_CVV1_Y_CVV2'>
+      <request>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="!PAN"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="!AMOUNT_ORIGINAL"/>
+          <field id="6" value="!AMOUNT_CONCILIATION"/>
+          <field id="7" value="!get_date(DATE)"/>
+          <field id="11" value="!STAN"/>
+          <field id="12" value="!get_date(DATE,&quot;yyMMddHHmmss&quot;)"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="!CURRENCY_ORIGINAL"/>
+          <field id="51" value="!CURRENCY_CONCILIATION"/>
+          <field id="92" value="!COUNTRY_CODE"/>
+          <field id="93" value="!DISCOVER_IIC"/>
+          <field id="100" value="!CABAL_ISS_IIC"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </request>
+      <expanded-request>
+        <isomsg direction="outgoing">
+          <!-- org.jpos.iso.packager.GenericPackager -->
+          <field id="0" value="1100"/>
+          <field id="2" value="6509000011505891"/>
+          <field id="3" value="000000"/>
+          <field id="4" value="000000000250"/>
+          <field id="6" value="000000000402"/>
+          <field id="7" value="1127145432"/>
+          <field id="11" value="000929"/>
+          <field id="12" value="231127145432"/>
+          <field id="14" value="2605"/>
+          <field id="22" value="200101200001"/>
+          <field id="24" value="100"/>
+          <field id="26" value="7011"/>
+          <field id="32" value="00000361603"/>
+          <field id="33" value="00000361589"/>
+          <field id="35" value="6509000011505891=26052016820000000000"/>
+          <field id="40" value="024"/>
+          <field id="42" value="123400000000000"/>
+          <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+          <field id="48" value="6"/>
+          <field id="49" value="826"/>
+          <field id="51" value="840"/>
+          <field id="92" value="826"/>
+          <field id="123" value="073130985337427"/>
+        </isomsg>
+      </expanded-request>
+      <expected-response>
+        <isomsg>
+          <!-- org.jpos.iso.packager.XMLPackager -->
+          <field id="11" value="! STAN=value"/>
+          <field id="37" value="! RRN=value"/>
+          <field id="39" value="! return value.equals(RC)"/>
+        </isomsg>
+      </expected-response>
+      <elapsed>45001</elapsed>
+    </test-case>
+  </error>
+</log>
+<log realm="client-diners-simulator" at="Mon Nov 27 14:55:17 ART 2023.959" lifespan="45316ms">
+  <results>
+    1: COMPRA_MANUAL_CON_CVV1_Y_CVV2                      [TIMEOUT] 45001ms.
+    elapsed server=45001ms(99%), simulator=215ms(0%), total=45216ms
+  </results>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:43:05 ART 2023.577" lifespan="85713188ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:43:05 ART 2023.596">
+  <warn>
+    channel-receiver-selftest-diners-receive
+    <exception name="null">
+    java.io.EOFException
+	at java.base/java.io.DataInputStream.readFully(DataInputStream.java:202)
+	at org.jpos.iso.channel.ASCIIChannel.getMessageLength(ASCIIChannel.java:96)
+	at org.jpos.iso.BaseChannel.receive(BaseChannel.java:642)
+	at org.jpos.q2.iso.ChannelAdaptor$Receiver.run(ChannelAdaptor.java:295)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+    </exception>
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:43:32 ART 2023.841" lifespan="2002ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:43:32 ART 2023.843">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:43:59 ART 2023.851" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:43:59 ART 2023.853">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:44:26 ART 2023.858" lifespan="2002ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:44:26 ART 2023.860">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:44:53 ART 2023.868" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:44:53 ART 2023.870">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:45:20 ART 2023.877" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:45:20 ART 2023.879">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:45:47 ART 2023.884" lifespan="2003ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:45:47 ART 2023.886">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:46:14 ART 2023.892" lifespan="2003ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:46:14 ART 2023.894">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:46:41 ART 2023.901" lifespan="2003ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:46:41 ART 2023.903">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:47:08 ART 2023.910" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:47:08 ART 2023.912">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:47:35 ART 2023.917" lifespan="2002ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:47:35 ART 2023.920">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:48:02 ART 2023.926" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:48:02 ART 2023.927">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:48:29 ART 2023.952" lifespan="2007ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:48:29 ART 2023.952">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:48:56 ART 2023.980" lifespan="2021ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:48:56 ART 2023.980">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:49:23 ART 2023.993" lifespan="2012ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:49:23 ART 2023.993">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:49:51 ART 2023.38" lifespan="2037ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:49:51 ART 2023.38">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:50:18 ART 2023.58" lifespan="2009ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:50:18 ART 2023.59">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:50:45 ART 2023.94" lifespan="2021ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:50:45 ART 2023.94">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:51:12 ART 2023.108" lifespan="2006ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:51:12 ART 2023.108">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:51:39 ART 2023.155" lifespan="2033ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:51:39 ART 2023.155">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:52:06 ART 2023.164" lifespan="2004ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:52:06 ART 2023.164">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:52:33 ART 2023.186" lifespan="2020ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:52:33 ART 2023.187">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:53:00 ART 2023.210" lifespan="2013ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:53:00 ART 2023.210">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:53:27 ART 2023.236" lifespan="2021ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:53:27 ART 2023.236">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:53:54 ART 2023.246" lifespan="2008ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:53:54 ART 2023.246">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="channel/127.0.0.1:13327" at="Tue Nov 28 14:54:21 ART 2023.274" lifespan="2023ms">
+  <connect>
+    localhost:13327
+      Connection refused: connect
+    Unable to connect
+  </connect>
+</log>
+<log realm="org.jpos.q2.iso.ChannelAdaptor" at="Tue Nov 28 14:54:21 ART 2023.274">
+  <warn>
+    check-connection
+    Unable to connect
+  </warn>
+</log>
+<log realm="rotate-log-listener" at="Tue Nov 28 14:54:31 ART 2023">
+   time exceeded - log rotated
+</log>
+</logger>

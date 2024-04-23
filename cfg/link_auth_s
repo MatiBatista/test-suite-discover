@@ -1,0 +1,30 @@
+<isomsg>
+    <field id="0" value="0200"/>
+    <field id="3" value="321000"/>
+    <field id="4" value="000000150000"/>
+    <field id="7" value='!get_date(DATE)'/>
+    <field id="11" value='!STAN'/>
+    <field id='12' value='!get_date(DATE,"HHmmss")'/>
+    <field id='13' value='!get_date(DATE,"MMdd")'/>
+    <field id="15" value="0000"/>
+    <field id="17" value="1211"/>
+    <field id="32" value=" "/>
+    <field id="35" value="5896570067918431=23083113360000000000"/>
+    <field id="37" value="006049 "/>
+    <field id="41" value="292202 "/>
+    <field id="42" value="0029 "/>
+    <field id="43" value="BCO. CIUDAD DE BS. AS.CAP. FED. 01 AR"/>
+    <field id="49" value="032"/>
+    <field id="52" value="03BD6D6571F1821C" type="binary"/>
+    <field id="60" value="0029LNK1+000"/>
+    <field id="61" value="3121LNK10000P"/>
+    <field id="63" value=" "/>
+    <field id="100" value="509 "/>
+    <field id="102" value=" "/>
+    <field id="103" value=" "/>
+    <field id="115" value="AA87E9BB605ABAB1"/>
+    <field id="124" value=" "/>
+    <field id="125" value=" "/>
+    <field id="127" value="0000000000000000000000000000000000000000000"/>
+</isomsg>
+

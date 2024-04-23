@@ -1,0 +1,32 @@
+<isomsg><!-- Reverso de "reversal_compra_isw"-->
+
+      <field id="0" value="1420"/>
+      <field id="2" value="6502720018953870"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000215"/>
+      <field id="6" value="000000000215"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN_DEBUG'/>
+      <field id="12" value="220411170138"/>
+      <field id="14" value="2412"/>
+      <field id="22" value="800101S91000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="400"/>
+      <field id="25" value="4005"/>
+      <field id="26" value="5912"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="37" value="9528N445HAW2"/>
+      <field id="38" value="039745"/>
+      <field id="42" value="601100113092175"/>
+      <field id="43" value="WALGREENS #9217\309 W ST CHARLES RD\LOMBARD\601480000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+      <field id='56' value='!FIELD56'/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="752087048994537"/>
+
+ 
+</isomsg>

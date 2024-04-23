@@ -1,0 +1,468 @@
+<qbean name="diners-selftest" logger="Q2" realm="client-diners-simulator"
+  class="org.jpos.simulator.TestRunner">
+
+  <property name="mux"     value="selftest-diners-mux" />
+  <property name="timeout" value="60000" />
+
+  <init>
+    import java.util.Date;
+    import org.jpos.iso.*;
+    import org.jpos.space.*;
+    Space psp = SpaceFactory.getSpace ("jdbm:simulator:simulator");
+    FORCE_STAN = null;
+	String PREV_DATE = null;
+    DATE = new Date();
+    
+
+    String get_stan() {
+        if (FORCE_STAN != null) {
+            String s = FORCE_STAN;
+            FORCE_STAN = null;
+            return s;
+        }
+        long stan = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (stan), 6);
+    }
+    String get_date() {
+        return ISODate.getDateTime(new Date());
+    }
+    String get_date(Date d) {
+        return ISODate.getDateTime(d);
+    }
+    String get_date (Date d, String format) {
+        return ISODate.formatDate (d, format);
+    }
+    String get_rrn() {
+        return ISODate.formatDate (new Date(), "ddhhmm")
+        + Long.toString (System.currentTimeMillis() % 1000000);
+    }
+		String get_rrn6() {
+        return Long.toString (System.currentTimeMillis() % 100);
+	}
+	String get_aut() {       
+        long aut = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (aut), 6);
+    }
+
+<!-- Valores fijos -->
+     MID="45994730005    ";
+     ACQ_INSTITUTION_ID = "00000366842";           <!-- Id del adquiriente emisor (IIC) campo 32 -->
+     FORWARDING_INSTITUTION_ID = "00000361589";    <!-- Id del participante que reenvia el msj campo 33 -->
+     RECEIVING_INSTITUTION_ID = "00000367389";     <!-- Id del participante destino del msj campo 100-->
+
+<!-- EntryMode -->
+     isBanda = "800101250004";
+     isContact = "500201591000";
+     isContactless = "910101S10901";
+     isManual = "600120691000";
+
+<!-- ServiceCode -->
+     serviceCode_CVV      = "101";
+     serviceCode_CVV_DPAS = "201";
+     serviceCode_CVV2     = "121";
+     serviceCode_ICC      = "999";
+
+<!-- Tarjetas -->
+
+<!--TARJETA DISCOVER AMZ TEST -->
+<!--    
+     PAN="6502720018953870";
+     EXP="2412";
+     CVV="953";
+     CVV2="727";
+-->
+
+<!-- Discover TC (CardProduct 177, DS_ESB) -->
+
+     PAN="6500870079959688";
+     EXP="2410";
+     CVV = "444";
+     CVV2 = "704";
+
+
+<!-- Discover TC (CardProduct 178, DS_INFINITUS) Estas van para test -->
+     
+    PAN="6502720012819531";
+     EXP="3003";
+     CVV="038";
+     CVV2="038";
+     ICVV="038"
+<!--
+     PAN="6502720012819531";
+     EXP="3003";
+     CVV="720";
+     CVV2="280";
+-->
+<!--
+     PAN="6502720020524891";
+     EXP="3003";
+     CVV="332";
+     CVV2="357";
+-->
+
+<!-- Tarjetas para test que solicito el banco CP177 -->
+<!--
+     PAN="6500870083757128";
+     EXP="2806";
+     CVV="993";
+     CVV2="069";
+
+     PAN="6500870083757169";
+     EXP="2806";
+     CVV="951";
+     CVV2="088";
+
+     PAN="6500870083757144";
+     EXP="2806";
+     CVV="367";
+     CVV2="547";
+
+     PAN="6500870083757151";
+     EXP="2806";
+     CVV="652";
+     CVV2="707";
+-->
+
+  </init>
+
+  <test-suite>
+   <path>cfg/</path>
+   
+
+                      <!-- COMPRA ON - SS_DISCOVER -->
+                      <!-- COMPRA ON - SS_DISCOVER -->
+                      <!-- COMPRA ON - SS_DISCOVER -->
+
+
+ <test file="1100_CO_BILLINGRATE" count="1" continue="yes" name="COMPRA_ON_DISC_BANDA">
+    <init>
+     MTI = "1100";
+     PCODE = "000000";
+     AMOUNT_ORIGINAL = "000000000200";
+     AMOUNT_CONCILIATION = "000000000026";
+     DATE = new Date();	
+	 STAN = get_stan();
+     TRACK2 = PAN + "=" + EXP + "201" + ICVV + "0000000000";
+     TRACK1 = "B" + PAN + "^FERRANDO/JUAN BAUTISTA^" + EXP + "101" + CVV + "0012300000";
+     RC = "00";
+     CURRENCY_ORIGINAL       =   "840";
+     CURRENCY_CONCILIATION   =   "840";
+     COUNTRY_CODE            =   "840";
+    </init>
+	<post>
+     RRN="000000005346";
+    </post>
+   </test>
+<!--
+
+    <test file="1100_discover_banda" count="1" continue="yes" name="COMPRA_ON_DISC_BANDA">
+    <init>
+     MTI = "1100";
+     PCODE = "000000";
+     AMOUNT_ORIGINAL = "000000000200";
+     AMOUNT_CONCILIATION = "000000000026";
+     DATE = new Date();	
+	 STAN = get_stan();
+     TRACK2 = PAN + "=" + EXP + "101" + CVV + "0000000000";
+     TRACK1 = "B" + PAN + "^FERRANDO/JUAN BAUTISTA^" + EXP + "101" + CVV2 + "0012300000";
+     RC = "00";
+     CURRENCY_ORIGINAL       =   "840";
+     CURRENCY_CONCILIATION   =   "840";
+     COUNTRY_CODE            =   "840";
+    </init>
+	<post>
+     RRN="000000005346";
+    </post>
+   </test>
+-->
+
+<!-- COMPRA Y ANULACION POR SEPARADO -->
+<!---->
+   <test file="1100_discover_manual" count="1" continue="yes" name="COMPRA_ON_DISC_BANDA">
+    <init>
+     MTI = "1100";
+     PCODE = "000000";
+     AMOUNT_ORIGINAL = "000000000200";
+     AMOUNT_CONCILIATION = "000000000026";
+     DATE = new Date();	
+	 STAN = get_stan();
+     RC = "00";
+     CURRENCY_ORIGINAL       =   "840";
+     CURRENCY_CONCILIATION   =   "840";
+     COUNTRY_CODE            =   "840";
+    </init>
+	<post>
+     RRN="000000005346";
+    </post>
+   </test>
+
+<!--
+   <test file="1420_discover_manual" count="1" continue="yes" name="Reverso">
+	<init>
+     MTI = "0200";
+     RC="00";
+     PCODE = "000000";
+     AMOUNT_ORIGINAL = "000000000200";
+     AMOUNT_CONCILIATION = "000000000026";
+     DATE = new Date();	
+	 STAN = "000000000740";
+     FIELD11 = STAN.substring(6,12);
+     CURRENCY_ORIGINAL       =   "840";
+     CURRENCY_CONCILIATION   =   "840";
+     COUNTRY_CODE            =   "840";
+     FIELD56 = "0200"+STAN+"0923"+"164139";
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+	</test>
+-->
+<!--
+    <test file="1100_discover_contact/less" count="1" continue="yes" name="COMPRA_ON_DISC_CONTACT/less">
+    <init>
+     MTI = "1100";
+     PCODE = "000000"
+     AMOUNT_ORIGINAL = "000000000200";
+     AMOUNT_CONCILIATION = "000000000026";
+     DATE = new Date();	
+	 STAN = get_stan();
+     TRACK2 = PAN + "=" + EXP + serviceCode_CVV_DPAS + CVV + "0000000000";
+     RC = "00";
+     CURRENCY_ORIGINAL       =   "840";
+     CURRENCY_CONCILIATION   =   "840";
+     COUNTRY_CODE            =   "840";
+    </init>
+	<post>
+      RRN="000000005346";
+    </post>
+   </test>
+-->
+
+<!--
+    <test file="pruebas_amount_uy" count="1" continue="yes" name="COMPRA_ON">
+    <init>
+     DATE=new Date();	
+	 STAN=get_stan();
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+     RC="00";
+    </init>
+	<post>
+      RRN="000000005346";
+    </post>
+   </test>
+-->
+
+    <!-- DEVOLUCION -->
+<!--
+    <test file="1120_22" count="1" continue="yes" name="DEVOLUCION">
+    <init>
+     DATE=new Date();	
+	 STAN=get_stan();
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+     RC="00"
+    </init>
+	<post>
+     RRN=response.getString(37);
+    </post>
+   </test>
+-->
+
+    <!-- PRUEBAS ATM -->
+<!--
+   <test file="sim_atm_hilda" count="1" continue="yes" name="SIM_ATM">
+    <init>
+     DATE=new Date();	
+	 STAN=get_stan();
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+   </test>
+-->
+
+    <!-- Compra + Reverso -->
+<!-- 
+	<test file="reversal_compra_isw" count="1" continue="yes" name="CompraPreReverso">
+	<init>
+     MTI="1100";
+     DATEHOY=get_date(DATE, "YYMMdd");
+     HORAHOY=get_date(DATE,"HHmmss");
+	 STAN=get_stan();
+     ORIGINAL_STAN=STAN;
+     FIELD32="00000339999";
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+     RC="00";
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+	</test>
+
+
+    FIELD56=MTI+ORIGINAL_STAN+DATEHOY+HORAHOY+FIELD32;
+-->
+    
+<!--
+	<test file="reversal_isw" count="1" continue="yes" name="Reverso">
+	<init>
+	 STAN=get_stan();
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+     RC="00";
+     FIELD56="1100"+"666666"+"666666"+"666666"+"00000339999";
+     
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+	</test>
+-->
+
+
+    <!-- Compra + Reverso Por separado (PARA DEBUG) primero hay que enviar la compra para que se genere, luego el debug, no todo junto-->
+<!--
+	<test file="reversal_compra_isw_debug" count="1" continue="yes" name="CompraPreReverso">
+	<init>
+     MTI="1100";
+	 STAN_DEBUG="666666";
+     GET_DATE_DEBUG="121212121212"
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+	</test>
+
+	<test file="reversal_isw_debug" count="1" continue="yes" name="Reverso">
+	<init>
+	 STAN_DEBUG="666666";
+     FIELD56="1100"+"666666"+"121212121212"+"00000339999";
+     RC="00";
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+	</test>
+-->
+
+<!-- Extraccion -->
+
+<!--
+    <test file="brasil_auth" count="1" continue="yes" name="P1-Retiro-On">
+    <init>DATE=new Date();
+      MTI="0200"; PCODE="000000"; RC="00";
+	  AMOUNTTRN="352085";
+	  AMOUNTSET="352085";
+	  MID="0000009200120971";
+	  SERVICECODE="121";
+	  TRACK2=PAN+"="+EXP+SERVICECODE+CVV+"0000000000";
+	  SETCONV="50000000";
+	  CURRENCYTRN = "840";
+	  ENTRYMODE = "021";
+    </init>
+	<post>
+      RRN=response.getString(37);
+    </post>
+   </test> 
+-->
+
+       <!-- COMPRA ON Y ANULACION ON 
+	  
+    <test file="Magstripe 8 Test Cases\AP_NO_A03" count="1" continue="yes" name="ZPK-confirmation">
+    <init>DATE=new Date();	
+     MTI="0200"; PCODE="003000"; RC="00";
+	 AMOUNTTRN="2100";
+	 AMOUNTSET="100";
+	 ACQINSTID="903294010  ";
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+	 ENTRYMODE = "021";
+	 STAN=get_stan();
+    </init>
+	<post>
+      RRN="000000005346";
+    </post>
+   </test> 
+-->
+
+<!--
+ <test file="Magstripe 8 Test Cases\AP_AM_A09" count="1" continue="yes" name="COMPRA_ON_Y_ANULACION_ON">
+        <init>
+            DATE = new Date();
+            STAN = get_stan();
+            MTI = "2200"; 
+                
+            PAN =   "36259600500102";
+            PAN_DN2 = "36259600000103";
+            PAN_DN3 = "36998900012397";
+            PAN_DISC = "6506010000030002";
+            EXP = "2407";
+            EXP_DN2 = "2407";
+            EXP_DN3 = "2407";
+            EXP_DISC = "2512";
+            AMOUNTTRN = "13007";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+            ORIGINAL_STAN = "000000008926".substring(6);
+            ORIGINAL_F12 = "20220211173433".substring(2);
+            ORIGINAL_DATA = "1100" + ORIGINAL_STAN + ORIGINAL_F12 + "00000367389";
+
+            CVV1 = "160";
+            CVV1_DISC = "100";
+            CVV2 = "086";
+            IIC = "00000361589";
+            ABC = "0000";
+            TRACK1 = "B" + PAN + "^FERRANDO/JUAN BAUTISTA^" + EXP + "101" + CVV1 +"800079900000";
+            TRACK1_DISC = "B" + PAN_DISC + "^FERRANDO/JUAN BAUTISTA^" + EXP_DISC + "101" + CVV1_DISC +"0012300000";
+            TRACK1_DN3 = "B" + PAN_DN3 + "^TEST CARD/DINERS CLUB     ^240710116080000000000000076000000";
+            //6011492100005xxx=25121011000012300000
+            TRACK2_DISC =   PAN_DISC + "=" + EXP_DISC +"101" + CVV1_DISC + "0012300000";
+            TRACK2 =        PAN + "=" + EXP + "101" + CVV1   + "800079900000";
+            TRACK2_DN3 =    "36998900012397=2407101160800007600000";
+            STAN = get_stan();
+            
+            RC = "00";
+            RRN = get_rrn();
+                 TID = get_tid();               comentar
+                 STAN_6 = get_stan_6();         comentar
+        </init>
+        <post>
+
+
+        </post>
+    </test>
+-->
+ 
+    <!-- Pruebas AP_NO, cambiar el ultim dígito de file segun prueba (1/2)-->
+
+<!--
+    <test file="Magstripe 8 Test Cases\AP_NO_A01" count="1" continue="yes" name="Echo test">
+        <init>
+            STAN = get_stan();
+            DATE = new Date();
+        </init>
+        <post>
+            RRN=response.getString(37);
+        </post>
+    </test>
+-->
+
+   <!-- Pruebas AP_NO zpk , cambiar el ultim dígito de file segun prueba (3/4)
+
+   
+    <test file="Magstripe 8 Test Cases\AP_AM_A09" count="1" continue="yes" name="GOD/BAD PIN">
+    <init>DATE=new Date();	
+     MTI="0200"; PCODE="003000"; RC="00";
+     PAN="36259600500102";
+	 AMOUNTTRN="2100";
+	 AMOUNTSET="100";
+	 ACQINSTID="903294010  ";
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+	 ENTRYMODE = "021";
+	 STAN=get_stan();
+    </init>
+	<post>
+      RRN="000000005346";
+    </post>
+   </test> 
+--> 
+
+ </test-suite>    
+</qbean>

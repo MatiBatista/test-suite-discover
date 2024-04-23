@@ -1,0 +1,48 @@
+<isomsg>
+      <field id="0" value="2200"/>
+      <field id="2" value="36070500000006"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000240"/>
+      <field id="5" value="000000000120"/>
+      <field id="7" value="0628140640"/>
+      <field id="9" value="50000000"/>
+      <field id="11" value="000000000159"/>
+      <field id="12" value="20230628140640"/>
+      <field id="13" value="202306"/>
+      <field id="14" value="2412"/>
+      <field id="15" value="20230628"/>
+      <field id="17" value="0628"/>
+      <field id="19" value="000"/>
+      <field id="22" value="0002"/>
+      <field id="26" value="5411"/>
+      <field id="32" value="000540001"/>
+      <field id="35" value="36070500000006D24121211230000000000"/>
+      <field id="37" value="000000818090"/>
+      <field id="41" value="12000798"/>
+      <field id="42" value="89361337515    "/>
+      <isomsg id="43">
+        <field id="2" value="SDSAFASDFS HERASPARANA"/>
+        <field id="4" value="AR           "/>
+        <field id="5" value="  "/>
+        <field id="6" value="0000      "/>
+        <field id="7" value="  "/>
+      </isomsg>
+      <field id="45" value="B36070500000006D2^    TRACK1 NO PRESENTE    ^121211230000000000"/>
+      <field id="48" value="101"/>
+      <isomsg id="49">
+        <field id="2" value="433"/>
+      </isomsg>
+      <field id="60" value="LPOSLPOS"/>
+      <field id="61" value="3121    03100000000"/>
+      <field id="62" value="&amp; 0000500156! 0400020  00000000032      Y ! C000026 433     2306      00 1 00 ! C400012 000000000072! R200046 01    1                             0         "/>
+      <isomsg id="104">
+        <field id="16" value="0000000025"/>
+        <field id="19" value="0000000000"/>
+      </isomsg>
+      <field id="112" value="0628"/>
+      <field id="113" value="20039683           00010001"/>
+      <field id="114" value="LPOSPRSM AR"/>
+      <field id="120" value="TRANSACCION POR LAPOS        "/>
+      <field id="124" value="000000000"/>
+      <field id="999" value="21ONLINECHECKS_RESPONSE016{RESULT=APROVED}07CP_TYPE0013"/>
+    </isomsg>

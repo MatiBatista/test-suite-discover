@@ -1,0 +1,23 @@
+<isomsg direction="incoming">
+ <field id='0' value='!MTI'/>  
+ <field id='2' value='!PAN'/>
+ <field id='3' value='!PCODE'/>
+ <field id='4' value='!ISOUtil.zeropad (AMOUNTTRN,12)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE,"yyMMddHHmmss")'/>
+ <field id="14" value='!EXP'/>
+ <field id="18" value="0000"/>
+ <field id="22" value="200101654101"/>
+ <field id="26" value="0000"/>
+ <field id='32' value='!ADQUIRIENTE' />
+ <field id='33' value='!PRESENTADOR' />
+ <field id='37' value='!get_rrn()' />
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+ <field id="43" value="                                        "/>
+ <field id="47" value="00525792"/>
+ <field id="48" value="0530030060066644  019                   088       003792"/>
+ <field id='49' value='!CURRENCYTRN' />
+ <field id="53" value="2000000001000000"/>
+ <field id="64" value="6AADF0F0" type="binary"/>
+</isomsg>

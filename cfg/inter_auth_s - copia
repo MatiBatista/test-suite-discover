@@ -1,0 +1,29 @@
+
+<!-- COMPRA -->
+
+<isomsg>
+ <field id='0' value='!MTI'/>
+ <field id="2" value='!PAN'/>
+ <field id='3' value='!PCODE'/>
+ <field id='4' value='!ISOUtil.zeropad (AMOUNTTRN,12)'/>
+ <field id='5' value='!ISOUtil.zeropad (AMOUNTSET,12)'/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='9' value="20002932"/>
+ <field id='11' value='!STAN'/>
+ <field id='12' value='!get_date(DATE,"HHmmss")'/>
+ <field id='13' value='!get_date(DATE, "MMdd")'/>
+ <field id='22' value='!ENTRYMODE'/>
+ <field id="25" value="00"/>
+ <field id="35" value='!TRACK2'/>
+ <field id="37" value='!RRN'/>
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+ <field id="43" value="CLADEL SRL            CARMELO      COLUY"/>
+ <field id="45" value="B6042650000177922^FERRANDO/ JUAN BAUTISTA^20051012400000000000" />
+ <field id="48" value='!TLV' />
+ <field id='49' value='!CURRENCYTRN' />
+ <field id='50' value='!CURRENCYSET' />
+ <field id='60' value='!VERSION' />
+ <field id="61" value='!PAIS' />
+ <field id="62" value='!INFOTICKET'/>
+</isomsg>

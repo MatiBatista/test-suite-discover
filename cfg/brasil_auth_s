@@ -1,0 +1,26 @@
+
+<!-- COMPRA -->
+
+<isomsg>
+ <field id='0' value='2200'/>  
+ <field id="2" value='5896579000000000'/>
+ <field id='3' value='000000'/>
+ <field id='4' value='000000000300'/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE,"HHmmss")'/>
+ <field id='13' value='!get_date(DATE, "MMdd")'/>
+ <field id="14" value="2412"/>
+ <field id='22' value='0001'/>
+ <field id="24" value="001"/>
+ <field id="25" value="00"/>
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+ <field id="43" value="HOTEL MARABA           SAO PAULO      BR"/>
+ <field id="45" value="B58965_______9885^WOLKOVICZ/LEANDRO         ^____________________"/>
+ <field id="48" value="101"/>
+ <field id='49' value='032' />
+ <field id="55" value='!CVV2'/>
+ <field id="61" value="0000000080007613083715  "/>
+ <field id="62" value="000680058"/>
+</isomsg>

@@ -1,0 +1,29 @@
+<isomsg>
+      <field id="0" value="1100"/>
+      <field id="2" value="6502720017440416"/>
+      <field id="3" value="180000"/>
+      <field id="4" value="000000000000"/>
+      <field id="6" value="000000000000"/>
+      <field id="7" value='!get_date(DATE,"MMddHHmmss")'/>
+      <field id="11" value="!STAN_6"/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="2410"/>
+      <field id="22" value="900101591000"/>
+      <field id="24" value="108"/>
+      <field id="26" value="5311"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="40" value="925"/>
+      <field id="42" value="601181060208873"/>
+      <field id="43" value="eBay zero doaller auth\2535 NORTH FIRST STREE\San Jose\951250000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="032"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="741313134161934"/>
+</isomsg>
+
+<!--field id="22" value="100990091000"-->
+
+<!--900101591000-->

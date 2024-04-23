@@ -1,0 +1,29 @@
+<isomsg>
+ <field id='0' value='!MTI'/>
+ <field id='2' value='!PAN '/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE, "yyyyMMddHHmmss")'/>
+ <field id='13' value='!get_date(DATE, "MMdd")'/>
+ <field id='24' value='!FUNCTION_CODE' />
+ <field id='32' value='!ACQUIRER_ID' />
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+ <field id='68' value='!BATCH_FILE_CTRL' />
+ <isomsg id='74'>
+  <field id='0' value='100' />
+  <field id='1' value='1' />
+  <field id='2' value='2000' />
+  <field id='3' value='2' />
+  <field id='4' value='30000' />
+  <field id='5' value='3' />
+  <field id='6' value='400000' />
+  <field id='7' value='4' />
+  <field id='8' value='5000000' />
+  <field id='9' value='5' />
+  <field id='10' value='60000000' />
+  <field id='11' value='6' />
+ </isomsg>
+ <field id='97' value='!AMOUNT_NET_RECONCILIATION' />
+</isomsg>
+

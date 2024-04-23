@@ -1,0 +1,21 @@
+<isomsg>
+    <field id="0" value="2200"/>
+    <field id="2" value="36070500001228"/>
+    <field id="3" value="000000"/>
+    <field id="4" value='0322000000000126'/>
+    <field id='7' value='!get_date(DATE)'/>
+    <field id='11' value='!get_stan()'/>
+    <field id='12' value='!get_date(DATE,"yyyyMMddHHmmss")'/>
+    <field id='13' value='!get_date(DATE,"yyyyMM")'/>
+    <field id="22" value="8107"/> <!-- posiciones 1 y 2 para terminal cap e pin cap -->
+    <field id="23" value="01"/>
+    <field id="25" value="0000"/> <!-- Los ultimos 2: Origen de la transaccion y condiciones especiales -->
+    <field id="26" value="1520"/> <!-- MCC -->
+    <field id="35" value='36070500001228=2312201120100034400000'/> <!-- docu datos de tarjetas -->
+    <field id="41" value="03034567"/>
+    <field id="42" value="66600127002    "/>
+    <field id="43" value="XUXA DA SILVA JOAO FERNAN             AR"/>
+    <field id="48" value="001"/>
+    <field id="55" value="9F02060000000001265F2A0200329F3704FACEB0049F360200339F100A0115A08880000000B8009F6E080000000000000000820211009F1A0200329F03060000000000009F26086EC2808DB9A2CC289F3303E068C89F2701809F34030000005F24032312319F1E0837393538313232365F340101950580000000009A032103259C0100840FA0000001523010123456789012345678"/>
+    <field id="100" value="00000361589"/>
+</isomsg>

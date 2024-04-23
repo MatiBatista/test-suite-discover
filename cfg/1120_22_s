@@ -1,0 +1,29 @@
+<isomsg><!-- 1120, DEVOLUCION QUE ENVIA DISCOVER, NOSOTROS LO CONVERTIMOS DE 1120.22 A 1100.02-->
+
+      <field id="0" value="1120"/>
+      <field id="2" value='!PAN'/>
+      <field id="3" value="223000"/>
+      <field id="4" value="000000001000"/>
+      <field id="6" value="000000000024"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value="220404115112"/>
+      <field id="14" value='!EXP'/>
+      <field id="22" value="800101250004"/>
+      <field id="24" value="100"/>
+      <field id="25" value="4006"/>
+      <field id="26" value="5813"/>
+      <field id="32" value="00000366842"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6502720014445160=24122018940000000000"/>
+      <field id="39" value="100"/>
+      <field id="40" value="942"/>
+      <field id="42" value="21393006       "/>
+      <field id="43" value="CONFITERIA MORGADANS  \ORINOCO 5040             \MONTEVIDEO   \11400     MO 858"/>
+      <field id="45" value="B6502720014445160^DISCOVER/URUGUAY III      ^24122018940000000000"/>
+      <field id="49" value="858"/>
+      <field id="51" value="840"/>
+      <field id="92" value="858"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="172081750732408"/>
+</isomsg>

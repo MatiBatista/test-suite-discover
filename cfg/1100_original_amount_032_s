@@ -1,0 +1,25 @@
+<isomsg>    
+        <field id="0" value="1100"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000001000"/>
+      <field id="6" value="000000000100"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="2903"/>
+      <field id="22" value="100990091000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="!EXP"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="40" value="!CVV2"/>
+      <field id="42" value="601181060203056"/>
+      <field id="43" value="GOTINDER.COMHELP\8750 N. CENTRAL EXPRES\2148534309\752310000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="032"/>
+      <field id="51" value="840"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="753110946994549"/>
+</isomsg>

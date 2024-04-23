@@ -1,0 +1,29 @@
+<isomsg>
+      <field id="0" value="1100"/> <!-- MTI -->
+      <field id="2" value='!PAN'/> <!-- AMZ 6502720018953870  OTRO 6042015100001705-->
+      <field id="3" value="000000"/>
+      <field id="4" value="000000005000"/> <!-- AMOUNT1 -->
+      <field id="6" value="000000010000"/> <!-- AMOUNT2 -->
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value="210302130047"/>
+<!--  <field id="13" value="2502"/>  -->
+      <field id="14" value='!EXP'/> <!-- AMZ 2412 OTRO 2110-->
+      <field id="22" value="000901660040"/>
+      <field id="24" value="100"/>
+      <field id="26" value="1520"/>
+      <field id="32" value="00000367389"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value='!TRACK2'/>
+      <field id="40" value="953"/> <!--086-->
+      <field id="41" value="03034567"/>
+      <field id="42" value="66600127002    "/> <!-- ID COMERCIO-->
+<!--  <field id="42" value="66600127002    "/>  -->
+      <field id="43" value="PELE DA SILVA JOAO FER\UNKNOWN\UNKNOWN\0000000000000152"/>
+      <field id="49" value="032"/>
+      <field id="51" value="032"/>
+      <field id="92" value="032"/>
+      <field id="93" value="00000000000"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="123070754633225"/>
+</isomsg>

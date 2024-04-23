@@ -1,0 +1,36 @@
+<isomsg>
+    <field id="0" value="2220"/>
+    <field id="2" value="36252300300006"/>
+    <field id="3" value="000000"/>
+    <field id="4" value='!ISOAMOUNT'/>
+    <!--field id="5" value='!ISOAMOUNT'/-->
+    <field id="7" value="0104161610"/>
+    <field id="9" value="50000000"/>
+    <field id="11" value="000000000365"/>
+    <field id="12" value="20230104161610"/>
+    <field id="13" value="202301"/>
+    <field id="14" value="2407"/>
+    <field id="15" value="20230104"/>
+    <field id="17" value="0104"/>
+    <field id="19" value="000"/>
+    <field id="22" value="0001"/>
+    <field id="26" value="1711"/>
+    <field id="32" value="000540001"/>
+    <field id="37" value="000000000019"/>
+    <field id="38" value="378857"/>
+    <field id="39" value="0000"/>
+    <field id="41" value="12000798"/>
+    <field id="42" value="89361337515    "/>
+    <field id="43" value="SDSAFASDFS HERASPARANAAR                "/>
+    <field id="48" value="101"/>
+    <field id="60" value="LPOSLPOS"/>
+    <field id="61" value="3121    03100000000"/>
+    <field id="62" value="[WIPED]"/>
+    <field id="112" value="0104"/>
+    <field id="113" value="20039683           00010001"/>
+    <field id="114" value="LPOSPRSM AR"/>
+    <field id="120" value="[WIPED]"/>
+    <field id="121" value="12000798"/>
+    <field id="124" value="000000000"/>
+    <field id="999" value="21ONLINECHECKS_RESPONSE016{RESULT=APROVED}07CP_TYPE0013"/>
+    </isomsg>

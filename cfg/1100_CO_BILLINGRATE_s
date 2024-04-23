@@ -1,0 +1,29 @@
+<isomsg>    
+      <field id="0" value="1100"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="003000"/>
+      <field id="4" value="000000150000"/>
+      <field id="6" value="000000001500"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="22" value="51120151014C"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="5977"/>
+      <field id="32" value="00000361628"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="!TRACK2"/>
+      <!--field id="35" value="6502720072901864=23072011800000000000"/-->
+      <field id="41" value="BBBBH965"/>
+      <field id="42" value="BBBBH965       "/>
+      <field id="43" value="MAIN SHOP DUTY FREE        \AER EL DORADO TERM 1 LOC 501  \OTRO DISTRITO CAPITA   \11001     CUN170"/>
+      <field id="48" value="6"/>
+      <field id="49" value="170"/>
+      <field id="51" value="840"/>
+      <field id="55" value="9F34035E03009F330360F8C89F03060000000000009F0206000004629600820239009F2701809F2608C61C2CF32C9002435F2A0201709F1E0830303030303030309F1A0201709C01009A032301319F10080105A04000000000950500000080009F090200019F37044DFF13C39F360200029F350122" type="binary"/>
+      <field id="92" value="170"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="193027530664229"/>
+      <field id="124" value="1"/>
+</isomsg>

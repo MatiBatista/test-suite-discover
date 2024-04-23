@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<channel-adaptor name='selftest-adaptor-inter' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="org.jpos.iso.channel.DinersChannel" logger="Q2" packager="org.jpos.iso.packager.GenericPackager">
+        <property name="packager-config" value="cfg/iso93ascii_DN.xml" />
+        <property name="host" value="localhost" />
+        <property name="port" value="13329" /> <!-- 3327 mdw-discover   13327 50_dn_server 10724 50_ar_server (ISW) 13950 50_isw_server (CSW)-->
+    </channel>
+    <in>selftest-diners-send</in>
+    <out>selftest-diners-receive</out>
+    <reconnect-delay>25000</reconnect-delay>
+</channel-adaptor>

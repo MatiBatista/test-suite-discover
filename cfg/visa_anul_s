@@ -1,0 +1,23 @@
+<isomsg direction="incoming">
+  <!-- org.jpos.iso.packager.GenericPackager[cfg/iso93ascii.xml] -->
+  <field id="0" value="1100"/>
+  <field id="2" value='!PAN'/>
+  <field id="3" value="220000"/>
+  <field id="4" value="000000018300"/>
+  <field id="11" value="747259"/>
+  <field id="12" value="141110160550"/>
+  <field id="18" value="0000"/>
+  <field id="22" value="200101254101"/>
+  <field id="26" value="0000"/>
+  <field id="32" value="547100"/>
+  <field id="33" value="028000"/>
+  <field id="35" value='!TRACK2'/>
+  <field id="37" value="727960122104"/>
+  <field id="41" value="17502866"/>
+  <field id="42" value="03357601       "/>
+  <field id="43" value="                                        "/>
+  <field id="48" value="0470032010060832  019                   080515R   "/>
+  <field id="49" value="032"/>
+  <field id="53" value="2000000001000000"/>
+  <field id='64' value="D1A0AEE620202020" type="binary"/>
+</isomsg>

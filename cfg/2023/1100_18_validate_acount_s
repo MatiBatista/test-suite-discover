@@ -1,0 +1,27 @@
+<isomsg>
+      <field id="0" value="!MTI"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="!PDCODE"/>
+      <field id="4" value="!AMOUNT_ORIGINAL"/>
+      <field id="6" value="!AMOUNT_CONCILIATION"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="!EXP"/>
+      <field id="22" value="000990091000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="108"/> <!-- validate acount use always Inquiry 108 -->
+      <field id="26" value="7399"/>
+      <field id="32" value="00000361603"/>
+      <field id="33" value="!IIC_DISCOVER"/>
+      <field id="40" value="!CVV2"/>
+      <field id="42" value="601181481835890"/>
+      <field id="43" value="FLICKR.COM\67 EAST EVELYN AVENUE\MOUNTAIN VIEW\940410000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="!CURRENCY_ORIGINAL"/>
+      <field id="51" value="!CURRENCY_CONCILIATION"/>
+      <field id="92" value="!COUNTRY_CODE"/>
+      <field id="100" value="!IIC_CABAL_ISS"/>
+      <field id="123" value="803079241091613"/>
+</isomsg>
+

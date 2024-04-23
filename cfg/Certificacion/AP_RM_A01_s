@@ -1,0 +1,25 @@
+<isomsg>
+    <field id="0" value="2200"/>
+    <field id="2" value="36259600500102"/>
+    <field id="3" value="020000"/>
+    <field id='4' value="!ISOAMOUNT"/>
+    <field id='7' value='!get_date(DATE)'/>
+    <field id='11' value='!STAN'/>
+    <field id='12' value='!get_date(DATE,"yyyyMMssHHmmss")'/>
+    <field id='13' value='!get_date(DATE,"yyyyMM")'/>
+    <field id="14" value="2407"/>
+    <field id="22" value="2101"/>
+    <field id="24" value="400" />
+    <field id="25" value="0000"/>
+    <field id="26" value="1520"/>
+    <field id="37" value='!RRN'/>
+    <field id="38" value='4J8941'/>
+    <field id="41" value="10007173"/>
+    <field id="42" value="66600127002    "/>
+    <field id="43" value="PELE DA SILVA JOAO FERNAN             AR"/>
+    <field id="48" value="001"/>     
+    <field id="56" value="110000768121081815271800000367389"/>
+    <!--<field id="100" value="00000361589"/>-->
+    <field id="128" value="071204424399588"/>
+</isomsg>
+

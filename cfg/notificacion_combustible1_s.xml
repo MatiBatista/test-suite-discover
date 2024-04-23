@@ -1,0 +1,27 @@
+<isomsg>
+      <field id="0" value="1120"/>
+      <field id="2" value="6502720017440416"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000224"/>
+      <field id="6" value="000000000224"/>
+      <field id="7" value='!get_date(DATE,"MMddHHmmss")'/>
+      <field id="11" value="!STAN_6"/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="2410"/>
+      <field id="22" value="900101591000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="25" value="4006"/>
+      <field id="26" value="5311"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="38" value="893551"/>
+      <field id="39" value="083"/>
+      <field id="42" value="601101620000016"/>
+      <field id="43" value="SHELL\\LOMBARD\601480000    840"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="752034415634213"/>
+</isomsg>

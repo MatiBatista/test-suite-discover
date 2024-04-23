@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<isomsg>
+ <field id='0' value='!MTI'/>
+ <field id='2' value='!PAN '/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE,"yyyyMMddHHmmss")'/>
+ <field id='24' value='!FUNCTION_CODE'/>
+ <field id='32' value='!ACQUIRER'/>
+ <field id='42' value='!MID'/>
+ <field id='72' value='#DATA_RECORD' />
+ <field id='101' value='!FILENAME' />
+</isomsg>
+

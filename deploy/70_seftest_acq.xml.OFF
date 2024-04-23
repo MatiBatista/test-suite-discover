@@ -1,0 +1,480 @@
+<!--    ESTE TEST CASE SE UTILIZA PARA REALIZAR LA CERTIFICACION O PRUEBAS DE ACQ DINERS O DISCOVER 
+        LOS ECHOS E INTERCAMBIOS DE LLAVES SE REALIZAN AUTOMATICAMENTE EN LOS LOGSS DE LOS SERVICIOS
+        LUEGO ESTAN DETALLADAS LAS PRUEBAS PARA:
+        GOOD/BAD PIN, ONLINE PIN CONTACT Y CONTACTLESS.
+        COMPRA Y REVERSO DINERS Y DISCOVER MAGSSTRIPE.
+        COMPRA Y REVERSO DINERS CONTACT Y CONTACTLESS.   -->
+
+<qbean name="diners-selftest" logger="Q2" realm="client-diners-simulator"
+  class="org.jpos.simulator.TestRunner">
+
+  <property name="mux"     value="selftest-diners-mux" />
+  <property name="timeout" value="15000" />
+
+  <init>
+    import java.util.Date;
+    import java.math.BigDecimal;
+    import org.jpos.iso.*;
+    import org.jpos.space.*;
+    Space psp = SpaceFactory.getSpace ("jdbm:simulator:simulator");
+    FORCE_STAN = null;
+	String PREV_DATE = null;
+    DATE = new Date();
+    
+
+    String get_stan() {
+        if (FORCE_STAN != null) {
+            String s = FORCE_STAN;
+            FORCE_STAN = null;
+            return s;
+        }
+        long stan = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (stan), 6);
+    }
+    String get_date() {
+        return ISODate.getDateTime(new Date());
+    }
+    String get_date(Date d) {
+        return ISODate.getDateTime(d);
+    }
+    String get_date (Date d, String format) {
+        return ISODate.formatDate (d, format);
+    }
+    String get_rrn() {
+        return ISODate.formatDate (new Date(), "ddhhmm")
+        + Long.toString (System.currentTimeMillis() % 1000000);
+    }
+		String get_rrn6() {
+        return Long.toString (System.currentTimeMillis() % 100);
+	}
+	String get_aut() {       
+        long aut = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (aut), 6);
+    }
+
+    ISOAmount getAmount(){
+        return new ISOAmount(4,032,new BigDecimal(3583.75));
+    }
+
+     String get_stan_6() {
+        if (FORCE_STAN != null) {
+            String s = FORCE_STAN;
+            FORCE_STAN = null;
+            return s;
+        }
+        long stan = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (stan), 6);
+    }
+
+    String get_tid() {
+        long tid = SpaceUtil.nextLong (psp, "STAN") % 1000000000000L;
+        return ISOUtil.zeropad (Long.toString (tid), 8);
+    }
+	
+
+    CURRENCY = "858";
+	ACQINSTID="00000099200";
+    TID = "666666";
+	
+<!--TARJETA DE DEBITO CREDICOOP-->
+<!--
+     PAN="6042015100001705"; 
+     EXP = "2110";
+	 CVV="818";
+	 CVV2 = "210";
+-->
+
+<!--TARJETA DISCOVER AMZ TEST -->
+     PAN="6502720018953870";
+     EXP="2412";
+     CVV="953";
+     CVV2="727";
+<!--    
+-->
+
+<!--Tarjeta de prueba Gaston-->
+<!--
+    PAN="6500870079959688";
+    EXP="2410";
+    CVV="444";
+    CVV2="704";
+-->
+<!--
+    SERVICECODE="121";
+    MID="45994730005    ";
+-->
+
+<!--TARJETAS Test, las envio Jimena -->
+<!--  
+     PAN="6502720012819531";
+     EXP="3003";
+     CVV="720";
+     CVV2="280";
+
+    PAN="6502720020524891";
+    EXP="3003";
+    CVV="332";
+    CVV2="357";
+-->
+
+  </init>
+
+  <test-suite>
+   <path>cfg/</path>
+
+
+                    <!-- TEST GOD/BAD PIN [OK]-->
+
+<!--
+    <test file="Certificacion\pin_AM_A09" count="1" continue="yes" name="GOOD/BAD PIN">
+        <init>
+            STAN =      get_stan();
+            DATE =      new Date();
+
+            AMOUNTTRN = "137";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            PAN =       "36259600500102";
+            EXP =       "2407";
+            CVV1 =      "160";
+            TRACK1 =    "B" + PAN + "^FERRANDO/JUAN BAUTISTA^" + EXP + "101" + CVV1 +"800079900000";
+            TRACK2 =    PAN + "=" + EXP + "101" + CVV1   + "800079900000";
+        </init>
+        <post> 
+        RRN="000000005346";
+        </post>
+    </test>
+--> 
+
+                    <!-- FULL REVERSAL DINERS [OK] -->
+                    <!-- Realizar compra, buscar campo 38, 56 y 128, completar reversi y enviarlo -->
+        <!-- id tl isw 20953 
+
+      <test file="echo" count="1" continue="yes" name="COMPRA_ON_DINERS">
+            <init>
+            STAN = get_stan();
+            ORIGINAL_STAN = STAN;
+            DATE = new Date();
+
+            PAN = "36259600500102" ;
+            EXP = "2407" ; 
+            CVV1 = "160" ;
+
+            AMOUNTTRN = "1414";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            TID = "030303";
+            </init>
+            <post>
+            RRN="000000005278";
+            </post>
+        </test>
+        -->
+<!--
+
+-->
+
+<!--
+
+      <test file="MAGSTRIPE8\AP_RM_A01" count="1" continue="yes" name="REVERSO">
+            <init>
+            STAN = get_stan();
+
+            AMOUNTTRN = "1414";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            TID = "030303";
+            FIELD56 = "2200" + "000932" + "202303" + "105731" + "00000361589" ;
+            RRN="000000005278";
+            </init>
+            <post>
+            RRN="000000005278";
+            </post>
+        </test>
+
+
+-->
+                   <!-- FULL REVERSAL DISCOVER [OK] 
+  -->   
+
+        <test file="Certificacion\AP_AM_A18" count="1" continue="yes" name="COMPRA_ON_DISCOVER">
+        <init>
+            DATEHOY = get_date(DATE, "YYMMdd");
+            HORAHOY = get_date(DATE,"HHmmss");
+
+            STAN = get_stan();
+            ORIGINAL_STAN = STAN;
+
+            AMOUNTTRN = "1414";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            TID = "121212";
+            
+        </init>
+        <post> 
+            RRN="000000005346";
+            ORIGINAL_STAN = response.getString(11);
+            F38 = response.getString(38);
+            F12 = response.getString(12);
+            HORA = F12.substring(8,14);
+            YEAR_MONTH = response.getString(13);
+            ORIGINAL_TID = response.getString(41);
+            
+
+
+        </post>
+    </test>
+
+    <test file="MAGSTRIPE8\AP_RM_A01" count="1" continue="yes" name="REVERSO">
+            <init>
+            STAN = get_stan();
+
+            AMOUNTTRN = "1414";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            TID = "030303";
+            FIELD56 = "2200" + ORIGINAL_STAN + YEAR_MONTH + HORA + "00000361589" ;
+            RRN="000000005278";
+            </init>
+            <post>
+            RRN="000000005278";
+            </post>
+        </test>
+    
+
+<!--
+
+        <test file="MAGSTRIPE8\AP_RM_A04" count="1" continue="yes" name="REVERSO">
+        <init>
+            STAN = get_stan();
+
+            AMOUNTTRN = "10000";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            TID = "666666"; RRN="000000005346";
+            FIELD56 = "2200" + "001297" + "202207" + "124918" + "00000361589"  ;
+        </init>
+        <post>
+            RRN="000000005346";
+        </post>
+    </test>
+-->
+
+                                     <!-- PRUEBAS DPAS CONTACT --> 
+                                     <!-- PRUEBAS DPAS CONTACT -->
+                                     <!-- PRUEBAS DPAS CONTACT --> 
+                                     <!-- PRUEBAS DPAS CONTACT -->
+                                     <!-- PRUEBAS DPAS CONTACT --> 
+                                     <!-- PRUEBAS DPAS CONTACT -->
+<!--
+     <test file="DPAS\CONTACT\AP_AT_A01" count="1" continue="yes" name="CONTACT_ONLINE_PIN">
+        <init>
+            STAN = get_stan();
+            DATE = new Date();
+        </init>
+        <post>
+            RRN="000000005346";
+        </post>
+    </test>
+-->
+
+<!--    
+         <test file="DPAS\CONTACT\AP_RT_E01" count="1" continue="yes" name="COMPRA_ON_DPAS_CONTACT">
+        <init>
+            DATEHOY = get_date(DATE, "YYMMdd");
+            HORAHOY = get_date(DATE,"HHmmss");
+
+            STAN = get_stan();
+            ORIGINAL_STAN = STAN;
+
+            AMOUNTTRN = "100200";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+        </init>
+        <post> 
+            RRN="000000005346";
+        </post>
+    </test>
+
+
+        <test file="DPAS\CONTACT\AP_RT_E01_rev" count="1" continue="yes" name="REVERSO_DPAS_CONTACT">
+        <init>
+            STAN = get_stan();
+
+            AMOUNTTRN = "10000";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+            APROVALCODE = "874831";
+
+            FIELD56 = "1100" + ORIGINAL_STAN + DATEHOY + HORAHOY + "00000361589"  ;
+        </init>
+        <post>
+            RRN="000000005346";
+        </post>
+    </test>
+-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+                                  <!-- PRUEBAS DPAS CONTACTLESS-->
+
+<!--
+    <test file="DPAS\CONTACTLESS\AP_AL_A01" count="1" continue="yes" name="CONTACTLESS_ONLINE_PIN">
+        <init>
+            STAN = get_stan();
+            DATE = new Date();
+        </init>
+        <post>
+            RRN="000000005346";
+        </post>
+    </test>
+-->
+
+
+<!--
+        <test file="MAGSTRIPE8\AP_AM_A09" count="1" continue="yes" name="COMPRA_ON_DPAS_CONTACTLESS_EMV">
+        <init>
+            DATEHOY = get_date(DATE, "YYMMdd");
+            HORAHOY = get_date(DATE,"HHmmss");
+
+            STAN = get_stan();
+            ORIGINAL_STAN = STAN;
+
+            AMOUNTTRN = "100200";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+        </init>
+        <post> 
+            RRN="000000005346";
+        </post>
+          </test>
+
+        <test file="DPAS\CONTACTLESS\AP_RL_E01_rev" count="1" continue="yes" name="REVERSO_EMV_DPAS">
+        <init>
+            STAN = get_stan();
+
+            AMOUNTTRN = "10000";
+            CURRENCY = "032";
+            ISOAMOUNT = CURRENCY + "2" + ISOUtil.zeropad (AMOUNTTRN,12);
+
+            FIELD56 = "1100" + ORIGINAL_STAN + DATEHOY + HORAHOY + "00000361589"  ;
+        </init>
+        <post>
+            RRN="000000005346";
+        </post>
+    </test>
+-->
+
+
+    <!-- PREVIOS DE NICO-->
+
+
+       <!-- COMPRA ON Y ANULACION ON -->
+    <!-- 
+        moto_AM_A01
+        AP.AM.A04
+        AP.AM.A09
+        AP.AM.A23
+        AP_AT_A01
+        AP_RT_F01
+        AP.AT.Z04
+        AP.AL.A01
+        AP_RL_D01
+        banda_AM_A04
+    -->
+<!--
+    <test file="AP_AM_A18" count="1" continue="yes" name="COMPRA_ON_Y_ANULACION_ON">
+        <init>
+            DATE = new Date();
+            MTI = "2200"; 
+                
+            PAN =   "36259600500102";
+            PAN_DN2 = "36259600000103";
+            PAN_DN3 = "36998900012397";
+            PAN_DISC = "6506010000030002";
+            EXP = "2407";
+            EXP_DN2 = "2407";
+            EXP_DN3 = "2407";
+            EXP_DISC = "2512";
+            AMOUNTTRN = "13007";
+            CURRENCY = "032";
+            ISOAMOUNT = getAmount() ;
+            ORIGINAL_STAN = "000000008926".substring(6);
+            ORIGINAL_F12 = "20220211173433".substring(2);
+            ORIGINAL_DATA = "1100" + ORIGINAL_STAN + ORIGINAL_F12 + "00000367389";
+
+            CVV1 = "160";
+            CVV1_DISC = "100";
+            CVV2 = "086";
+            IIC = "00000361589";
+            ABC = "0000";
+            TRACK1 = "B" + PAN + "^FERRANDO/JUAN BAUTISTA^" + EXP + "101" + CVV1 +"800079900000";
+            TRACK1_DISC = "B" + PAN_DISC + "^FERRANDO/JUAN BAUTISTA^" + EXP_DISC + "101" + CVV1_DISC +"0012300000";
+            TRACK1_DN3 = "B" + PAN_DN3 + "^TEST CARD/DINERS CLUB     ^240710116080000000000000076000000";
+            //6011492100005xxx=25121011000012300000
+            TRACK2_DISC =   PAN_DISC + "=" + EXP_DISC +"101" + CVV1_DISC + "0012300000";
+            TRACK2 =        PAN + "=" + EXP + "101" + CVV1   + "800079900000";
+            TRACK2_DN3 =    "36998900012397=2407101160800007600000";
+            STAN = get_stan();
+            RC = "00";
+            RRN = get_rrn();
+            STAN_6 = get_stan_6();
+            TID = get_tid();
+        </init>
+        <post>
+        </post>
+    </test>
+-->
+
+    <!--     COMPRA ON Y ANULACION ON   
+
+<test file="AP_RM_A04" count="1" continue="yes" name="COMPRA_ON">
+    <init>DATE=new Date();	
+     MTI="0200"; PCODE="003000"; RC="00";
+	 AMOUNTTRN="2100";
+	 AMOUNTSET="100";
+	 ACQINSTID="903294010  ";
+     TRACK2=PAN+"="+EXP+"101"+CVV +"0000000000";
+	 ENTRYMODE = "021";
+	 STAN=get_stan();
+    </init>
+	<post>
+      RRN="000000005346";
+    </post>
+   </test> 
+-->
+  
+
+<!--
+            PCODE = "003000";  
+            
+            AMOUNTSET = "100";
+            ACQINSTID = "903294010  ";
+            ENTRYMODE = "021";
+            TID = "55555555";
+            MID = "66600127002";
+            CURRENCYTRN = "858";
+            CURRENCYSET = "840";
+            
+            AMOUNT="0";
+            
+            TLV = "CU03001CV03" + CVV2;
+            TCONV = "50382000";
+            MADIC = "25";
+            VERSION = "43TETRA    2001b";
+            PAIS = "UYPS2K";
+            INFOTICKET = "0039005";	 
+-->
+
+</test-suite>    
+</qbean>

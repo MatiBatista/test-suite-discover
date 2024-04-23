@@ -1,0 +1,73 @@
+import org.jpos.iso.*;
+import org.jpos.space.*;
+import org.jpos.iso.packager.*;
+import java.math.BigInteger;
+package ar.cabal.jpos;
+
+
+Space sp = SpaceFactory.getSpace();
+
+evt.addMessage ("--- ss_inter_outgoing, received message ---");
+
+try {
+        if (message.hasField(4) ) {
+            ISOAmount amnt = new ISOAmount (4);
+            String currency = message.getString(4).substring(0,3);
+            amnt.setValue (currency + message.getString(4).charAt(3) + message.getString(4).substring(4));
+            message.set (amnt);
+        }
+        if (message.hasField(5) ) {
+            ISOAmount amnt = new ISOAmount (5);
+            String currency = message.getString(5).substring(0,3);
+            amnt.setValue (currency + message.getString(5).charAt(3) + message.getString(5).substring(4));
+            message.set (amnt);
+        }
+        if(message.hasField(43)){
+            ISOMsg m43 = new ISOMsg(43);
+            String f43 = message.getString(43);
+            m43.set(2, f43.substring(0, 22).trim());
+            m43.set(4, f43.substring(22, 35).trim());
+            m43.set(5, f43.substring(35, 37).trim());
+            if (message.hasField(62)) {
+                m43.set(6, message.getString(62));
+            }
+            m43.set(7, f43.substring(38, 40).trim());
+            message.set(m43);
+        }
+        if (message.hasField(49) ) {
+            ISOMsg f49 = new ISOMsg(49);
+            f49.set(2,message.getString(49));
+            message.set (f49);
+        }
+        if(message.hasField(52)){
+            Object f52 = message.getValue(52);
+            BigInteger bigInt = new BigInteger(f52, 16);
+            byte[] bytearray = (bigInt.toByteArray());
+
+            if(bytearray.length > 8){
+                bytearray = Arrays.copyOfRange(bytearray, 1, bytearray.length);
+            }
+            message.set(52,bytearray);
+        }
+        if( message.hasField(56)){
+                String field = message.getString(56);
+                message.unset(56);
+                ISOMsg f56 = new ISOMsg(56);
+                f56.set(1, field.substring(0,4) );
+                f56.set(2, ISOUtil.zeropad(field.substring(4,10), 12));
+                Date d = null;
+                d = ISODate.parseISODate(field.substring(10,22));
+                f56.set(3, ISODate.formatDate(d, "yyyyMMddHHmmss"));
+                f56.set(4, ISOUtil.zeropad( field.substring(22), 11) );
+                message.set(f56);
+            }
+
+        message;
+} catch (Exception e) {
+    evt.addMessage ("--- ss_inter_outgoing ---");
+    evt.addMessage (e);
+    throw new ISOFilter.VetoException (e.getMessage());
+}
+if (r == null) {
+    throw new ISOFilter.VetoException ("ss_inter_outgoing: can't find request " + "ss_inter_outgoing");
+}

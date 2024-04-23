@@ -1,0 +1,28 @@
+<isomsg><!-- Así ingreso la compra a la cual le generaremos el reverso -->
+
+      <field id="0" value='!MTI'/>
+      <field id="2" value="6502720018953870"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000215"/>
+      <field id="6" value="000000000215"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN_DEBUG'/>
+      <field id='12' value='!GET_DATE_DEBUG'/>
+      <field id="14" value="2412"/>
+      <field id="22" value="800101S91000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="5912"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6502720018953870=24122015290000000000"/>
+      <field id="41" value="02170021"/>
+      <field id="42" value="601100113092175"/>
+      <field id="43" value="WALGREENS #9217\309 W ST CHARLES RD\LOMBARD\601480000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="752087048994537"/>
+</isomsg>

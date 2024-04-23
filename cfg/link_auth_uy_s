@@ -1,0 +1,29 @@
+<isomsg direction="incoming">
+ <field id='0' value='!MTI'/>  
+ <field id='3' value='!PCODE'/>
+ <field id='4' value='!ISOUtil.zeropad (AMOUNTTRN,12)'/>
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE,"HHmmss")'/>
+ <field id='13' value='!get_date(DATE, "MMdd")'/>
+ <field id="15" value="0000"/>
+ <field id='17' value='!get_date(DATE, "MMdd")'/>
+ <field id='32' value='!ACQINSTID' />
+ <field id='35' value='!TRACK2' />
+ <field id='37' value='!get_rrn()' />
+ <field id='41' value='!TID' />
+ <field id='42' value='!MID' />
+  <field id="43" value="BANCO REPUBLICA       N.PALMIRA    858UY"/>
+ <field id='49' value='!CURRENCYTRN' />
+ <field id="52" value="BFE18B6C5F8C29AF" type="binary"/>
+ <field id="54" value='!DATA54'/>
+ <field id="60" value='!DATA60'/>
+ <field id="61" value="3121LNK10000P"/>
+ <field id="63" value="                "/>
+ <field id="100" value="509        "/>
+ <field id="102" value="                            "/>
+ <field id="103" value="                            "/>
+ <field id="124" value=" "/>
+ <field id="125" value='!ACCOUNTINDICATOR'/>
+ <field id="127" value="0005000084500000855000002725000230260000000"/>
+</isomsg>

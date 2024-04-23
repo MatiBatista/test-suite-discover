@@ -1,0 +1,11 @@
+<isomsg>
+ <field id="0" value="1804" />
+ <field id='7' value='!get_date(DATE)'/>
+ <field id='11' value='!get_stan()'/>
+ <field id='12' value='!get_date(DATE, "yyMMddhhmmss")'/>
+ <field id='24' value='814'/>
+ <field id='93' value='00000361589'/>
+ <field id='94' value='00000367389'/>
+ <field id="96" value="1B79B024D5950142C978B7BD7E7664DB58FE"  type="binary"/>
+</isomsg>
+

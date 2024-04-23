@@ -1,0 +1,28 @@
+<!-- Este es el caso que envió Adrianne en la certificacion New ICC -->
+<isomsg>
+      <field id="0" value="1100"/>
+      <field id="2" value="!PAN"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="!AMOUNT_ORIGINAL"/>
+      <field id="6" value="!AMOUNT_CONCILIATION"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="2605"/>
+      <field id="22" value="200101200001"/>
+      <field id="24" value="100"/>
+      <field id="26" value="7011"/>
+      <field id="32" value="00000361603"/> <!-- ENTIDAD EMISORA , EL PRIMERO QUE LO MANDA, PONELE BANCO DE NEW YORK -->
+      <field id="33" value="00000361589"/> <!-- QUIEN TE LO MANDA, DISCOVER -->
+      <field id="35" value="6509000011505891=26052016820000000000"/>
+      <field id="40" value="024"/>
+      <field id="42" value="123400000000000"/>
+      <field id="43" value="Issuer Script\Test Street\Test City\GU14 7SR  HAM826"/>
+      <field id="48" value="6"/>
+      <field id="49" value="!CURRENCY_ORIGINAL"/>
+      <field id="51" value="!CURRENCY_CONCILIATION"/>
+      <field id="92" value="!COUNTRY_CODE"/>
+      <field id="93" value="!DISCOVER_IIC"/> <!-- ORIGEN -->
+      <field id="100" value="!CABAL_ISS_IIC"/> <!-- DESTINO -->
+      <field id="123" value="073130985337427"/>
+</isomsg>

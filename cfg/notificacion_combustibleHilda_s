@@ -1,0 +1,32 @@
+<isomsg>
+      <field id="0" value="1100"/>
+      <field id="2" value="6502720018953870"/>
+      <field id="3" value="000000"/>
+      <field id="4" value="000000000100"/>
+      <field id="6" value="000000000100"/>
+      <field id="7" value='!get_date(DATE,"MMddHHmmss")'/>
+      <field id="11" value="!STAN_6"/>
+      <field id="12" value='!get_date(DATE,"yyMMddHHmmss")'/>
+      <field id="14" value="2412"/>
+      <field id="22" value="500201591000"/>
+      <field id="23" value="000"/>
+      <field id="24" value="100"/>
+      <field id="26" value="5542"/>
+      <field id="32" value="00000339999"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6502720018953870=24122015290000000000"/>
+      <field id="41" value="14464401"/>
+      <field id="42" value="601101617000441"/>
+      <field id="43" value="LOMBARD MART\5 E NORTH AVE\LOMBARD\601480000    840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+      <field id="55" value="82023900950500000080009A032207059C01005F2A0208409F02060000000025009F03060000000000009F1A0208409F26081D9B4D4373B3F36E9F330360D8C89F34031F03029F360200459F37047A4C18BE8407A00000015230109F10080105A04000400000" type="binary"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="752160370703333"/>
+</isomsg>
+
+<!--field id="22" value="100990091000"-->
+
+<!--900101591000 f123Orig 752160370703332 -->

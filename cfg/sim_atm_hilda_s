@@ -1,0 +1,30 @@
+<isomsg direction="incoming"> <!-- PRUEBA IDENTICA A LAS QUE REALIZO HILDA Y FALLA POR CAMPO 23-->
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso93ascii_DN.xml] -->
+      <field id="0" value="1100"/>
+      <field id="2" value="6502720014929478"/> <!-- 9478 TARJETA DONDE SE HIZO LA PRUEBA EN ATM-->
+      <field id="3" value="013000"/> <!-- Processing Code 013000 ATM -->
+      <field id="4" value="000000002000"/>
+      <field id="6" value="000000002000"/>
+      <field id="7" value='!get_date(DATE)'/>
+      <field id="11" value='!STAN'/>
+      <field id="12" value="220326113137"/>
+      <field id="14" value="2412"/> <!-- 2412 TARJETA DONDE SE HIZO LA PRUEBA EN ATM-->
+      <field id="22" value="510201511001"/>
+      <field id="23" value="000"/>  
+      <field id="24" value="100"/>
+      <field id="26" value="6011"/>
+      <field id="32" value="00000339998"/>
+      <field id="33" value="00000361589"/>
+      <field id="35" value="6502720014929478=24122019460000000000"/> <!-- TARJETA DONDE SE HIZO LA PRUEBA EN ATM-->
+      <field id="41" value="P63000  "/> <!-- ESTE PUEDE HACER EL QUILOMBO -->
+      <field id="42" value="PULSE EFT ACQUI"/>
+      <field id="43" value="JOHNSONS VIL-63000\1 West St. Charles Road\Villa Park   \          IL 840"/>
+      <field id="48" value="6"/>
+      <field id="49" value="840"/>
+      <field id="51" value="840"/>
+ <!-- <field id="52" value="44AF9E5E454DC862" type="binary"/> -->
+      <field id="55" value="9F3303604000950580000480009F37040FD48B1D9F1E0859433733323030329F10080105A000000000009F26084ED06CFB0D0E87599F36020025820239009C01019F1A0208409A032203265F2A0208409F03060000000000009F2701809F34030201009F3501149F02060000000020008407A00000015230109F090200019F4104000011529F5301529F0607A0000001523010" type="binary"/>
+      <field id="92" value="840"/>
+      <field id="100" value="00000367389"/>
+      <field id="123" value="172074034978401"/>
+    </isomsg>
